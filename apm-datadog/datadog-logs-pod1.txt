@@ -1,0 +1,188 @@
+[s6-init] making user provided files available at /var/run/s6/etc...exited 0.
+[s6-init] ensuring user provided files have correct perms...exited 0.
+[fix-attrs.d] applying ownership & permissions fixes...
+[fix-attrs.d] done.
+[cont-init.d] executing container initialization scripts...
+[cont-init.d] 01-check-apikey.sh: executing... 
+[cont-init.d] 01-check-apikey.sh: exited 0.
+[cont-init.d] 50-ci.sh: executing... 
+[cont-init.d] 50-ci.sh: exited 0.
+[cont-init.d] 50-ecs.sh: executing... 
+[cont-init.d] 50-ecs.sh: exited 0.
+[cont-init.d] 50-eks.sh: executing... 
+[cont-init.d] 50-eks.sh: exited 0.
+[cont-init.d] 50-kubernetes.sh: executing... 
+[cont-init.d] 50-kubernetes.sh: exited 0.
+[cont-init.d] 50-mesos.sh: executing... 
+[cont-init.d] 50-mesos.sh: exited 0.
+[cont-init.d] 51-docker.sh: executing... 
+[cont-init.d] 51-docker.sh: exited 0.
+[cont-init.d] 59-defaults.sh: executing... 
+[cont-init.d] 59-defaults.sh: exited 0.
+[cont-init.d] 60-network-check.sh: executing... 
+[cont-init.d] 60-network-check.sh: exited 0.
+[cont-init.d] 60-sysprobe-check.sh: executing... 
+[cont-init.d] 60-sysprobe-check.sh: exited 0.
+[cont-init.d] 89-copy-customfiles.sh: executing... 
+[cont-init.d] 89-copy-customfiles.sh: exited 0.
+[cont-init.d] done.
+[services.d] starting services
+starting security-agent
+starting process-agent
+starting trace-agent
+starting agent
+starting system-probe
+[services.d] done.
+2025-09-17 09:15:18 UTC | TRACE | INFO | (pkg/util/log/log.go:732 in func1) | Starting to load the configuration
+2025-09-17 09:15:18 UTC | TRACE | INFO | (pkg/util/log/log.go:732 in func1) | Loading proxy settings
+2025-09-17 09:15:18 UTC | TRACE | INFO | (pkg/util/log/log.go:732 in func1) | Starting to resolve secrets
+2025-09-17 09:15:18 UTC | TRACE | WARN | (pkg/util/log/log.go:777 in func1) | Agent configuration relax permissions constraint on the secret backend cmd, Group can read and exec
+2025-09-17 09:15:18 UTC | TRACE | INFO | (pkg/util/log/log.go:732 in func1) | Finished resolving secrets
+2025-09-17 09:15:18 UTC | TRACE | INFO | (pkg/util/log/log.go:737 in func1) | Agent did not find PodResources socket at /var/lib/kubelet/pod-resources/kubelet.sock
+2025-09-17 09:15:18 UTC | TRACE | INFO | (pkg/util/log/log.go:737 in func1) | 2 Features detected from environment: kubernetes,kube_orchestratorexplorer
+2025-09-17 09:15:18 UTC | TRACE | INFO | (reflect/value.go:584 in call) | starting to load the IPC auth primitives (timeout: 30s)
+error: failed to retrieve host info: getting boot time: open /host/proc/uptime: no such file or directory
+2025-09-17 09:15:18 UTC | TRACE | INFO | (comp/core/ipc/impl@v0.70.2/ipc.go:158 in buildIPCComponent) | successfully loaded the IPC auth primitives (fingerprint: 159c30e4c5f6b1bf)
+2025-09-17 09:15:18 UTC | TRACE | INFO | (reflect/value.go:584 in call) | configsync disabled (agent_ipc.port: 0 | agent_ipc.config_refresh_interval: 0)
+2025-09-17 09:15:18 UTC | TRACE | INFO | (comp/trace/config/setup.go:69 in LoadConfigFile) | Loaded configuration: /etc/datadog-agent/datadog.yaml
+2025-09-17 09:15:18 UTC | TRACE | INFO | (comp/trace/config/setup.go:381 in applyDatadogConfig) | Activating non-local traffic automatically in containerized environment, trace-agent will listen on 0.0.0.0
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (pkg/util/log/log.go:732 in func1) | Starting to load the configuration
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (pkg/util/log/log.go:732 in func1) | Loading proxy settings
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (pkg/util/log/log.go:732 in func1) | Starting to resolve secrets
+2025-09-17 09:15:18 UTC | SECURITY | WARN | (pkg/util/log/log.go:777 in func1) | Agent configuration relax permissions constraint on the secret backend cmd, Group can read and exec
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (pkg/util/log/log.go:732 in func1) | Finished resolving secrets
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (pkg/util/log/log.go:737 in func1) | Agent did not find PodResources socket at /var/lib/kubelet/pod-resources/kubelet.sock
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (pkg/util/log/log.go:737 in func1) | 2 Features detected from environment: kubernetes,kube_orchestratorexplorer
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (comp/core/ipc/impl@v0.70.2/ipc.go:72 in NewReadWriteComponent) | starting to load the IPC auth primitives (timeout: 30s)
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (comp/core/ipc/impl@v0.70.2/ipc.go:197 in printAuthSignature) | successfully loaded the IPC auth primitives (fingerprint: 159c30e4c5f6b1bf)
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (comp/core/configsync/configsyncimpl/module.go:70 in newComponent) | configsync disabled (agent_ipc.port: 0 | agent_ipc.config_refresh_interval: 0)
+2025-09-17 09:15:18 UTC | SECURITY | INFO | (pkg/config/setup/config.go:2187 in LoadCustom) | Starting to load the configuration
+2025-09-17 09:15:18 UTC | PROCESS | ERROR | (pkg/util/log/log.go:813 in func1) | failed to retrieve host info: getting boot time: open /host/proc/uptime: no such file or directory
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (pkg/util/log/log.go:737 in func1) | running on platform: 
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (pkg/util/log/log.go:737 in func1) | running version: 7.70.2
+2025-09-17 09:15:18 UTC | PROCESS | WARN | (pkg/util/log/log.go:777 in func1) | misconfig: proc mount: failed to open /host/proc/1/mounts - proc fs inspection may not work: open /host/proc/1/mounts: no such file or directory
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (pkg/util/log/log.go:732 in func1) | Starting to load the configuration
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (pkg/util/log/log.go:732 in func1) | Loading proxy settings
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (pkg/util/log/log.go:732 in func1) | Starting to resolve secrets
+2025-09-17 09:15:18 UTC | PROCESS | WARN | (pkg/util/log/log.go:777 in func1) | Agent configuration relax permissions constraint on the secret backend cmd, Group can read and exec
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (pkg/util/log/log.go:732 in func1) | Finished resolving secrets
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (pkg/util/log/log.go:737 in func1) | Agent did not find PodResources socket at /var/lib/kubelet/pod-resources/kubelet.sock
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (pkg/util/log/log.go:737 in func1) | 2 Features detected from environment: kubernetes,kube_orchestratorexplorer
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (comp/core/ipc/impl@v0.70.2/ipc.go:72 in NewReadWriteComponent) | starting to load the IPC auth primitives (timeout: 30s)
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (comp/core/ipc/impl@v0.70.2/ipc.go:197 in printAuthSignature) | successfully loaded the IPC auth primitives (fingerprint: 159c30e4c5f6b1bf)
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (comp/core/configsync/configsyncimpl/module.go:70 in newComponent) | configsync disabled (agent_ipc.port: 0 | agent_ipc.config_refresh_interval: 0)
+2025-09-17 09:15:18 UTC | PROCESS | INFO | (pkg/config/setup/config.go:2187 in LoadCustom) | Starting to load the configuration
+2025-09-17 09:15:19 UTC | PROCESS | INFO | (comp/rdnsquerier/impl/rdnsquerier.go:83 in NewComponent) | Reverse DNS Enrichment config: (enabled=false workers=0 chan_size=0 cache.enabled=true cache.entry_ttl=0 cache.clean_interval=0 cache.persist_interval=0 cache.max_retries=-1 cache.max_size=0 rate_limiter.enabled=true rate_limiter.limit_per_sec=0 rate_limiter.limit_throttled_per_sec=0 rate_limiter.throttle_error_threshold=0 rate_limiter.recovery_intervals=0 rate_limiter.recovery_interval=0)
+2025-09-17 09:15:19 UTC | PROCESS | WARN | (comp/networkpath/npcollector/npcollectorimpl/config.go:56 in newConfig) | config key "network_path.collector.tcp_method" is unknown
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (pkg/util/log/log.go:732 in func1) | Starting to load the configuration
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (pkg/util/log/log.go:732 in func1) | Loading proxy settings
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (pkg/util/log/log.go:737 in func1) | Agent did not find PodResources socket at /var/lib/kubelet/pod-resources/kubelet.sock
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (pkg/util/log/log.go:737 in func1) | 2 Features detected from environment: kubernetes,kube_orchestratorexplorer
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (pkg/util/log/log.go:732 in func1) | Starting to load the configuration
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (comp/core/ipc/impl@v0.70.2/ipc.go:72 in NewReadWriteComponent) | starting to load the IPC auth primitives (timeout: 30s)
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (comp/core/ipc/impl@v0.70.2/ipc.go:197 in printAuthSignature) | successfully loaded the IPC auth primitives (fingerprint: 159c30e4c5f6b1bf)
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (comp/core/workloadmeta/impl/store.go:102 in start) | workloadmeta store initialized successfully
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (comp/core/tagger/impl-remote/remote.go:240 in start) | remote tagger initialized successfully
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (pkg/runtime/runtime.go:28 in func1) | runtime: set GOMAXPROCS to: 2
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (pkg/config/remote/client/client.go:389 in pollLoop) | retrying the first update of remote-config state (rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:5001: connect: connection refused")
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (comp/core/workloadmeta/collectors/internal/remote/generic.go:113 in Start) | remote workloadmeta initialized successfully
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (comp/core/workloadmeta/impl/store.go:618 in startCandidates) | workloadmeta collector "remote-workloadmeta" started successfully
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (cmd/system-probe/subcommands/run/command.go:355 in startSystemProbe) | starting system-probe v7.70.2
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (cmd/system-probe/subcommands/run/command.go:463 in logUserAndGroupID) | current user id/name: 0/root
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (cmd/system-probe/subcommands/run/command.go:466 in logUserAndGroupID) | current group id/name: 0/root
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (cmd/system-probe/subcommands/run/command.go:360 in startSystemProbe) | system probe not enabled. exiting
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (comp/core/workloadmeta/collectors/internal/remote/generic.go:152 in func1) | unable to establish stream, will possibly retry: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp :5001: connect: connection refused"
+2025-09-17 09:15:19 UTC | CORE | INFO | (pkg/util/log/log.go:737 in func1) | Using '/opt/datadog-agent/embedded' as Python home
+2025-09-17 09:15:19 UTC | CORE | INFO | (pkg/util/log/log.go:732 in func1) | Starting to load the configuration
+2025-09-17 09:15:19 UTC | CORE | INFO | (pkg/util/log/log.go:732 in func1) | Loading proxy settings
+2025-09-17 09:15:19 UTC | CORE | INFO | (pkg/util/log/log.go:732 in func1) | Starting to resolve secrets
+2025-09-17 09:15:19 UTC | CORE | WARN | (pkg/util/log/log.go:777 in func1) | Agent configuration relax permissions constraint on the secret backend cmd, Group can read and exec
+2025-09-17 09:15:19 UTC | CORE | INFO | (pkg/util/log/log.go:732 in func1) | Finished resolving secrets
+2025-09-17 09:15:19 UTC | CORE | INFO | (pkg/util/log/log.go:737 in func1) | Agent did not find PodResources socket at /var/lib/kubelet/pod-resources/kubelet.sock
+2025-09-17 09:15:19 UTC | CORE | INFO | (pkg/util/log/log.go:737 in func1) | 2 Features detected from environment: kubernetes,kube_orchestratorexplorer
+2025-09-17 09:15:19 UTC | CORE | INFO | (pkg/config/setup/config.go:2187 in LoadCustom) | Starting to load the configuration
+2025-09-17 09:15:19 UTC | CORE | INFO | (comp/forwarder/defaultforwarder/forwarder.go:81 in createOptions) | starting forwarder with 1 endpoints
+2025-09-17 09:15:19 UTC | CORE | INFO | (comp/forwarder/defaultforwarder/forwarder.go:87 in createOptions) | domain 'https://app.us5.datadoghq.com.' has 1 keys: ***************************900b5
+2025-09-17 09:15:19 UTC | CORE | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:282 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+2025-09-17 09:15:19 UTC | CORE | INFO | (comp/core/ipc/impl@v0.70.2/ipc.go:72 in NewReadWriteComponent) | starting to load the IPC auth primitives (timeout: 30s)
+2025-09-17 09:15:19 UTC | CORE | INFO | (comp/core/ipc/impl@v0.70.2/ipc.go:197 in printAuthSignature) | successfully loaded the IPC auth primitives (fingerprint: 159c30e4c5f6b1bf)
+2025-09-17 09:15:19 UTC | CORE | INFO | (pkg/process/metadata/workloadmeta/extractor.go:85 in NewWorkloadMetaExtractor) | Instantiating a new WorkloadMetaExtractor
+2025-09-17 09:15:19 UTC | CORE | ERROR | (pkg/process/procutil/process_linux.go:147 in NewProcessProbe) | could not parse boot time: unable to read stat file from /host/proc/stat: open /host/proc/stat: no such file or directory
+2025-09-17 09:15:19 UTC | CORE | ERROR | (pkg/process/procutil/process_linux.go:147 in NewProcessProbe) | could not parse boot time: unable to read stat file from /host/proc/stat: open /host/proc/stat: no such file or directory
+2025-09-17 09:15:19 UTC | CORE | INFO | (comp/core/tagger/impl/tagger.go:110 in NewComponent) | Tagger is created
+2025-09-17 09:15:19 UTC | SYS-PROBE | INFO | (comp/core/workloadmeta/collectors/internal/remote/generic.go:152 in func1) | unable to establish stream, will possibly retry: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp :5001: connect: connection refused"
+2025-09-17 09:15:20 UTC | SYS-PROBE | INFO | (pkg/config/remote/client/client.go:423 in pollLoop) | retrying the first update of remote-config state (rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:5001: connect: connection refused")
+2025-09-17 09:15:20 UTC | SYS-PROBE | INFO | (comp/core/workloadmeta/collectors/internal/remote/generic.go:152 in func1) | unable to establish stream, will possibly retry: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp :5001: connect: connection refused"
+2025-09-17 09:15:20 UTC | TRACE | INFO | (comp/trace/config/hostname.go:34 in hostname) | Could not get hostname via gRPC: context deadline exceeded. Falling back to other methods.
+2025-09-17 09:15:21 UTC | SYS-PROBE | INFO | (pkg/config/remote/client/client.go:423 in pollLoop) | retrying the first update of remote-config state (rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:5001: connect: connection refused")
+2025-09-17 09:15:21 UTC | SYS-PROBE | INFO | (comp/core/workloadmeta/collectors/internal/remote/generic.go:152 in func1) | unable to establish stream, will possibly retry: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp :5001: connect: connection refused"
+2025-09-17 09:15:22 UTC | SYS-PROBE | INFO | (pkg/config/remote/client/client.go:423 in pollLoop) | retrying the first update of remote-config state (rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:5001: connect: connection refused")
+2025-09-17 09:15:22 UTC | TRACE | INFO | (comp/trace/config/hostname.go:94 in acquireHostnameFallback) | Acquired hostname from OS: "datadog-b7fd945fd-d4dcz". Core agent was unreachable at "/opt/datadog-agent/bin/agent/agent": exit status 255.
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/runtime/runtime.go:28 in func1) | runtime: set GOMAXPROCS to: 2
+2025-09-17 09:15:22 UTC | TRACE | INFO | (comp/trace/agent/impl/agent.go:174 in prepGoRuntime) | Trace Agent final GOMAXPROCS: 2
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/runtime/gomemlimit_linux.go:44 in SetGoMemLimit) | Cgroup memory limit not found, doing nothing
+2025-09-17 09:15:22 UTC | TRACE | INFO | (comp/trace/agent/impl/agent.go:192 in prepGoRuntime) | GOMEMLIMIT unconstrained.
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/agent/agent.go:156 in NewAgent) | Starting Agent with processor trace buffer of size 0
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/api/api.go:145 in NewHTTPReceiver) | Receiver configured with 1 decoders and a timeout of 1000ms
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/watchdog/cpu.go:30 in getpid) | Failed to read pid from /host/proc/self: readlink /host/proc/self: no such file or directory. Falling back to os.Getpid
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/writer/trace.go:132 in NewTraceWriter) | Trace writer initialized (climt=5 qsize=1 compression=zstd)
+2025-09-17 09:15:22 UTC | TRACE | INFO | (comp/core/tagger/impl-remote/remote.go:124 in func1) | remote tagger initialized successfully
+2025-09-17 09:15:22 UTC | TRACE | INFO | (comp/trace/agent/impl/run.go:101 in runAgentSidekicks) | Trace agent running on host datadog-b7fd945fd-d4dcz
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (pkg/trace/api/container_linux.go:93 in NewIDProvider) | Failed to identify cgroups version due to err: open /host/proc/mounts: no such file or directory. APM data may be missing containerIDs for applications running in containers. This will prevent spans from being associated with container tags.
+2025-09-17 09:15:22 UTC | TRACE | WARN | (comp/trace/agent/impl/run.go:74 in func2) | The /config/set endpoint on this port is deprecated and will be removed. The same endpoint is available on the debug server at 127.0.0.1:5012
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/api/listener.go:41 in NewMeasuredListener) | Listener started with 1000 maximum connections.
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/api/api.go:281 in Start) | Listening for traces at http://0.0.0.0:8126
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/api/listener.go:41 in NewMeasuredListener) | Listener started with 1000 maximum connections.
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/api/api.go:300 in Start) | Listening for traces at unix:///var/run/datadog/apm.socket
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/agent/agent.go:219 in Run) | Processing Pipeline configured with 2 workers
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/config/remote/client/client.go:389 in pollLoop) | retrying the first update of remote-config state (rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:5001: connect: connection refused")
+2025-09-17 09:15:22 UTC | CORE | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:282 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+Error: Error while getting hostname, exiting: unable to reliably determine the host name. You can define one in the agent config file or in your hosts file
+AGENT EXITED WITH CODE 255, SIGNAL 0, KILLING CONTAINER
+2025-09-17 09:15:22 UTC | SYS-PROBE | INFO | (cmd/system-probe/subcommands/run/command.go:199 in func2) | Received signal 'terminated', shutting down...
+2025-09-17 09:15:22 UTC | PROCESS | INFO | (pkg/process/util/signal_nowindows.go:26 in HandleSignals) | Caught signal 'terminated'; terminating.
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/agent/agent.go:271 in loop) | Exiting...
+2025-09-17 09:15:22 UTC | TRACE | INFO | (comp/trace/agent/impl/agent.go:292 in handleSignal) | Received signal 15 (terminated)
+2025-09-17 09:15:22 UTC | TRACE | INFO | (pkg/trace/stats/concentrator.go:101 in Run) | Exiting concentrator, computing remaining stats
+2025-09-17 09:15:22 UTC | TRACE | WARN | (comp/core/tagger/impl-remote/remote.go:246 in func2) | error received trying to start stream with target ":5001": tagger stream not started
+2025-09-17 09:15:22 UTC | TRACE | INFO | (comp/core/tagger/impl-remote/remote.go:127 in func2) | remote tagger stopped successfully
+AGENT EXITED WITH CODE 256, SIGNAL 15, KILLING CONTAINER
+security-agent exited with code 256, signal 15, restarting in 2 seconds
+trace-agent exited with code 0, disabling
+2025-09-17 09:15:23 UTC | SYS-PROBE | INFO | (pkg/config/remote/client/client.go:423 in pollLoop) | retrying the first update of remote-config state (rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp [::1]:5001: connect: connection refused")
+2025-09-17 09:15:23 UTC | SYS-PROBE | INFO | (comp/core/workloadmeta/collectors/internal/remote/generic.go:152 in func1) | unable to establish stream, will possibly retry: rpc error: code = Unavailable desc = connection error: desc = "transport: Error while dialing: dial tcp :5001: connect: connection refused"
+2025-09-17 09:15:24 UTC | SYS-PROBE | WARN | (comp/core/tagger/impl-remote/remote.go:464 in run) | error received trying to start stream with target ":5001": tagger stream not started
+2025-09-17 09:15:24 UTC | SYS-PROBE | INFO | (comp/core/tagger/impl-remote/remote.go:264 in stop) | remote tagger stopped successfully
+system-probe exited with code 0, disabling
+2025-09-17 09:16:19 UTC | PROCESS | ERROR | (pkg/process/checks/host_info.go:108 in getHostname) | failed to get hostname from grpc: cannot connect to datadog agent via grpc: context deadline exceeded
+2025-09-17 09:16:20 UTC | PROCESS | ERROR | (pkg/process/checks/host_info.go:115 in getHostname) | failed to get hostname from cmd: exit status 255
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (pkg/util/containers/metrics/system/collector_linux.go:87 in newSystemCollector) | Unable to initialize cgroup provider (cgroups not mounted?), err: open /host/proc/mounts: no such file or directory
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (pkg/process/metadata/workloadmeta/extractor.go:85 in NewWorkloadMetaExtractor) | Instantiating a new WorkloadMetaExtractor
+2025-09-17 09:16:20 UTC | PROCESS | ERROR | (pkg/process/procutil/process_linux.go:147 in NewProcessProbe) | could not parse boot time: unable to read stat file from /host/proc/stat: open /host/proc/stat: no such file or directory
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:282 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:282 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:282 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:282 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (comp/process/agent/agent_linux.go:65 in enabledHelper) | The process checks will run in the core agent
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (comp/process/apiserver/apiserver.go:53 in newApiServer) | API server listening on localhost:6162
+2025-09-17 09:16:20 UTC | PROCESS | WARN | (command/main_common.go:322 in shouldStayAlive) | The process-agent is staying alive to prevent crash loops due to the checks running on the core agent. Thus, the process-agent is idle. Update your Helm chart or Datadog Operator to the latest version to prevent this (https://docs.datadoghq.com/containers/kubernetes/installation/).
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (command/main_common.go:248 in runApp) | Received exit signal, shutting down...
+2025-09-17 09:16:20 UTC | PROCESS | INFO | (command/main_common.go:257 in runApp) | The process-agent has successfully been shut down
+process-agent exited with code 0, disabling
+[cont-finish.d] executing container finish scripts...
+[cont-finish.d] done.
+[s6-finish] waiting for services.
+[s6-finish] sending all processes the TERM signal.
+[s6-finish] sending all processes the KILL signal and exiting.

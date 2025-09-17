@@ -1,0 +1,87 @@
+duplicate key value violates unique constraint "pg_type_typname_nsp_index"
+DETAIL:  Key (typname, typnamespace)=(notes, 2200) already exists.
+
+ * Serving Flask app 'app'
+ * Debug mode: on
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://10.244.1.255:8080
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+2025-09-17 09:04:27,724 ERROR [ddtrace.internal.writer.writer] [writer.py:443] [dd.service=notes dd.env=dev dd.version=0.1.0 dd.trace_id=0 dd.span_id=0] - failed to send, dropping 2 traces to intake at http://datadog:8126/v0.5/traces after 3 retries
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/writer/writer.py", line 435, in _flush_single_payload
+    self._send_payload_with_backoff(encoded, n_traces, client)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/utils/retry.py", line 49, in retry_wrapped
+    raise exception
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/utils/retry.py", line 40, in retry_wrapped
+    result = f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/writer/writer.py", line 656, in _send_payload
+    response = super(AgentWriter, self)._send_payload(payload, count, client)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/writer/writer.py", line 308, in _send_payload
+    response = self._put(payload, headers, client, no_trace=True)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/writer/writer.py", line 264, in _put
+    self._conn.request(
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/http.py", line 37, in request
+    return super().request(method, url, body=body, headers=_headers, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/appsec/_common_module_patches.py", line 178, in wrapped_request
+    return original_request_callable(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/appsec/_common_module_patches.py", line 178, in wrapped_request
+    return original_request_callable(*args, **kwargs)
+  File "/usr/local/lib/python3.10/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/http/client.py", line 942, in connect
+    self.sock = self._create_connection(
+  File "/usr/local/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+ERROR:ddtrace.internal.writer.writer:failed to send, dropping 2 traces to intake at http://datadog:8126/v0.5/traces after 3 retries
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/writer/writer.py", line 435, in _flush_single_payload
+    self._send_payload_with_backoff(encoded, n_traces, client)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/utils/retry.py", line 49, in retry_wrapped
+    raise exception
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/utils/retry.py", line 40, in retry_wrapped
+    result = f(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/writer/writer.py", line 656, in _send_payload
+    response = super(AgentWriter, self)._send_payload(payload, count, client)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/writer/writer.py", line 308, in _send_payload
+    response = self._put(payload, headers, client, no_trace=True)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/writer/writer.py", line 264, in _put
+    self._conn.request(
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/internal/http.py", line 37, in request
+    return super().request(method, url, body=body, headers=_headers, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/appsec/_common_module_patches.py", line 178, in wrapped_request
+    return original_request_callable(*args, **kwargs)
+  File "/usr/local/lib/python3.10/site-packages/ddtrace/appsec/_common_module_patches.py", line 178, in wrapped_request
+    return original_request_callable(*args, **kwargs)
+  File "/usr/local/lib/python3.10/http/client.py", line 1283, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1329, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1278, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/usr/local/lib/python3.10/http/client.py", line 1038, in _send_output
+    self.send(msg)
+  File "/usr/local/lib/python3.10/http/client.py", line 976, in send
+    self.connect()
+  File "/usr/local/lib/python3.10/http/client.py", line 942, in connect
+    self.sock = self._create_connection(
+  File "/usr/local/lib/python3.10/socket.py", line 857, in create_connection
+    raise err
+  File "/usr/local/lib/python3.10/socket.py", line 845, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 127-010-781

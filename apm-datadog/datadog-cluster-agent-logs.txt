@@ -1,0 +1,157 @@
+'/conf.d/kubernetes_state_core.yaml.default' -> '/etc/datadog-agent/conf.d/kubernetes_state_core.yaml.default'
+'/conf.d/kubernetes_apiserver.yaml' -> '/etc/datadog-agent/conf.d/kubernetes_apiserver.yaml'
+'/conf.d/kubernetes_state_core.yaml.default' -> '/etc/datadog-agent/conf.d/kubernetes_state_core.yaml.default'
+'/conf.d/kubernetes_apiserver.yaml' -> '/etc/datadog-agent/conf.d/kubernetes_apiserver.yaml'
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (pkg/util/log/log.go:840 in func1) | Starting to load the configuration
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (pkg/util/log/log.go:840 in func1) | Loading proxy settings
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (pkg/util/log/log.go:840 in func1) | Starting to resolve secrets
+2025-09-17 09:03:38 UTC | CLUSTER | WARN | (pkg/util/log/log.go:885 in func1) | Agent configuration relax permissions constraint on the secret backend cmd, Group can read and exec
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (pkg/util/log/log.go:840 in func1) | Finished resolving secrets
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (pkg/util/log/log.go:845 in func1) | Agent did not find PodResources socket at /var/lib/kubelet/pod-resources/kubelet.sock
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (pkg/util/log/log.go:845 in func1) | 2 Features detected from environment: kubernetes,kube_orchestratorexplorer
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/forwarder.go:81 in createOptions) | starting forwarder with 1 endpoints
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/forwarder.go:87 in createOptions) | domain 'https://app.datadoghq.eu.' has 1 keys: ***************************0ec92
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:282 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (comp/core/ipc/impl@v0.69.3/ipc.go:91 in NewReadWriteComponent) | starting to load the IPC auth primitives (timeout: 30s)
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (comp/core/ipc/impl@v0.69.3/ipc.go:201 in printAuthSignature) | successfully loaded the IPC auth primitives (fingerprint: 9f45fb8a6d1846d5)
+2025-09-17 09:03:38 UTC | CLUSTER | INFO | (comp/core/tagger/impl/tagger.go:110 in NewComponent) | Tagger is created
+2025-09-17 09:03:41 UTC | CLUSTER | INFO | (pkg/util/kubernetes/clustername/clustername.go:80 in getClusterName) | Got cluster name minikube from config
+2025-09-17 09:03:41 UTC | CLUSTER | INFO | (pkg/util/kubernetes/clustername/clustername.go:131 in getClusterName) | Using cluster name minikube from the node label
+2025-09-17 09:03:41 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:282 in NewDefaultForwarder) | Retry queue storage on disk is disabled
+2025-09-17 09:03:41 UTC | CLUSTER | INFO | (pkg/aggregator/demultiplexer.go:204 in getDogStatsDWorkerAndPipelineCount) | Dogstatsd workers and pipelines count:  2  workers,  1  pipelines
+2025-09-17 09:03:41 UTC | CLUSTER | INFO | (pkg/aggregator/demultiplexer.go:153 in GetDogStatsDWorkerAndPipelineCount) | Dogstatsd configured to run with 2 workers and 1 pipelines
+2025-09-17 09:03:41 UTC | CLUSTER | INFO | (pkg/aggregator/time_sampler.go:56 in NewTimeSampler) | Creating TimeSampler #0
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:428 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://7-69-3-app.agent.datadoghq.eu." (1 api key(s))
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (comp/core/workloadmeta/impl/store.go:102 in start) | workloadmeta store initialized successfully
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/default_forwarder.go:428 in Start) | Forwarder started, sending to 1 endpoint(s) with 1 worker(s) each: "https://orchestrator.datadoghq.eu" (1 api key(s))
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (pkg/collector/runner/runner.go:100 in ensureMinWorkers) | Runner 1 added 4 workers (total: 4)
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (comp/core/tagger/collectors/workloadmeta_main.go:154 in stream) | workloadmeta tagger collector started
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (pkg/clusteragent/autoscaling/workload/loadstore/storeimpl.go:221 in startCleanupInBackground) | Starting entity store cleanup
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (pkg/api/security/security.go:178 in getClusterAgentAuthToken) | Using configured cluster_agent.auth_token
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (subcommands/start/command.go:334 in start) | Waiting to obtain APIClient connection
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (subcommands/start/command.go:339 in start) | Got APIClient connection
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (comp/core/workloadmeta/collectors/internal/kubeapiserver/kubeapiserver.go:261 in runStartupCheck) | Starting startup health check waiting for 1 k8s reflectors to sync
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (comp/core/workloadmeta/impl/store.go:618 in startCandidates) | workloadmeta collector "kubeapiserver" started successfully
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (subcommands/start/command.go:346 in start) | Hostname is: minikube-minikube
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/controllers/controllers.go:89 in StartControllers) | "autoscalers" is disabled
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:101 in newMetadataController) | Initializing metadata controller with endpoints
+2025-09-17 09:03:42 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/controllers/metadata_controller.go:124 in run) | Starting metadata controller
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (subcommands/start/command.go:392 in start) | Cluster ID: ed2f5ff3-b529-49bd-b3f1-3fc5d5b18cab, Cluster Name: minikube
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/providers/config_reader.go:173 in read) | Searching for configuration files at: /etc/datadog-agent/conf.d
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/providers/config_reader.go:173 in read) | Searching for configuration files at: /opt/datadog-agent/bin/dist/conf.d
+2025-09-17 09:03:43 UTC | CLUSTER | WARN | (comp/core/autodiscovery/providers/config_reader.go:177 in read) | Skipping, open /opt/datadog-agent/bin/dist/conf.d: no such file or directory
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/providers/config_reader.go:173 in read) | Searching for configuration files at: 
+2025-09-17 09:03:43 UTC | CLUSTER | WARN | (comp/core/autodiscovery/providers/config_reader.go:177 in read) | Skipping, open : no such file or directory
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:542 in initListenerCandidates) | static config listener successfully started
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:542 in initListenerCandidates) | kube_endpoints listener successfully started
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:542 in initListenerCandidates) | kube_services listener successfully started
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:542 in initListenerCandidates) | environment listener successfully started
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/config_poller.go:171 in collectOnce) | file provider: collected 3 new configurations, removed 0
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/listeners/environment.go:60 in createServices) | Listener created kube_orchestrator service from environment
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/listeners/environment.go:60 in createServices) | Listener created kubelet service from environment
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/listeners/environment.go:67 in createServices) | Listener created container service from environment
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:437 in LoadAndRun) | Started config provider "file"
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:435 in LoadAndRun) | Started config provider "kubernetes-endpoints", polled every 10s
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:435 in LoadAndRun) | Started config provider "kubernetes-services", polled every 10s
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (pkg/clusteragent/clusterchecks/dispatcher_main.go:90 in newDispatcher) | Adding both tags cluster_name and kube_cluster_name. You can use 'disable_cluster_name_tag_key' in the Agent config to keep the kube_cluster_name tag only
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (pkg/util/containers/metrics/provider/registry.go:102 in collectorDiscovery) | Container metrics provider discovery process finished
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (subcommands/start/command.go:605 in setupClusterCheck) | Started cluster check Autodiscovery
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (pkg/clusteragent/clusterchecks/handler.go:117 in Run) | Becoming leader, waiting 30s for node-agents to report
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:236 in runLeaderElection) | Starting leader election process for "datadog-cluster-agent-54c6bc9d78-4pstf"...
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (client-go@v0.32.3/tools/leaderelection/leaderelection.go:212 in Run) | attempting to acquire leader lease default/datadog-leader-election...
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (subcommands/start/command.go:514 in start) | Auto instrumentation patcher is disabled
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (apimachinery@v0.32.3/pkg/util/wait/backoff.go:226 in func1) | successfully acquired lease default/datadog-leader-election
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection_engine.go:152 in func1) | New leader "datadog-cluster-agent-54c6bc9d78-4pstf"
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection_engine.go:158 in func2) | Started leading as "datadog-cluster-agent-54c6bc9d78-4pstf"...
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (comp/core/workloadmeta/collectors/internal/kubeapiserver/kubeapiserver.go:292 in runStartupCheck) | All (1) K8S reflectors synced to workloadmeta
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (pkg/clusteragent/admission/controllers/secret/controller.go:81 in Run) | Starting secrets controller for default/webhook-certificate
+2025-09-17 09:03:43 UTC | CLUSTER | INFO | (pkg/clusteragent/admission/controllers/webhook/controller_v1.go:114 in Run) | Starting webhook controller for secret default/webhook-certificate and webhook datadog-webhook - Using admissionregistration/v1
+2025-09-17 09:03:44 UTC | CLUSTER | INFO | (pkg/clusteragent/admission/controllers/secret/controller.go:106 in enqueueOnLeaderNotif) | Got a leader notification, enqueuing a reconciliation for default/webhook-certificate
+2025-09-17 09:03:44 UTC | CLUSTER | INFO | (subcommands/start/command.go:562 in start) | All components started. Cluster Agent now running.
+2025-09-17 09:03:49 UTC | CLUSTER | INFO | (comp/core/healthprobe/impl/healthprobe.go:166 in healthHandler) | Healthcheck failed on: [aggregator tagger-workloadmeta ad-config-provider-kubernetes-endpoints ad-config-provider-kubernetes-services clusterchecks-leadership ad-servicelistening workloadmeta-puller workloadmeta-store tagger-store workloadmeta-kubeapiserver]
+2025-09-17 09:03:52 UTC | CLUSTER | ERROR | (comp/core/autodiscovery/autodiscoveryimpl/autoconfig.go:172 in func1) | Workloadmeta collectors are not ready after 18 retries: workloadmeta not initialized, starting check scheduler controller anyway.
+2025-09-17 09:03:52 UTC | CLUSTER | INFO | (comp/core/autodiscovery/scheduler/controller.go:72 in Start) | Autodiscovery scheduler controller started
+2025-09-17 09:03:52 UTC | CLUSTER | INFO | (pkg/collector/scheduler/scheduler.go:93 in Enter) | Scheduling check kubernetes_apiserver with an interval of 15s
+2025-09-17 09:03:52 UTC | CLUSTER | INFO | (pkg/collector/scheduler/scheduler.go:93 in Enter) | Scheduling check kubernetes_state_core:f0ece86b2bc4e82e with an interval of 15s
+2025-09-17 09:03:52 UTC | CLUSTER | INFO | (pkg/collector/scheduler/scheduler.go:93 in Enter) | Scheduling check orchestrator:c640d4e943da6c1d with an interval of 10s
+2025-09-17 09:03:53 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2025-09-17 09:03:53 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2025-09-17 09:03:54 UTC | CLUSTER | INFO | (pkg/util/kubernetes/apiserver/leaderelection/leaderelection.go:219 in EnsureLeaderElectionRuns) | Leader election running, current leader is "datadog-cluster-agent-54c6bc9d78-4pstf"
+2025-09-17 09:03:54 UTC | CLUSTER | INFO | (client-go@v0.32.3/rest/request.go:637 in tryThrottleWithInfo) | Waited for 1.18490495s due to client-side throttling, not priority and fairness, request: GET:https://10.96.0.1:443/api/v1/nodes?limit=500&resourceVersion=0
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:54 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:03:55 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2025-09-17 09:03:57 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check
+2025-09-17 09:03:58 UTC | CLUSTER | INFO | (comp/forwarder/defaultforwarder/transaction/transaction.go:454 in internalProcess) | Successfully posted payload to "https://7-69-3-app.agent.datadoghq.eu./api/v2/series" (202 Accepted), the agent will only log transaction success every 500 transactions
+2025-09-17 09:04:00 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2025-09-17 09:04:00 UTC | CLUSTER | INFO | (pkg/kubestatemetrics/builder/builder.go:384 in generateConfigMapStores) | Using NamespaceAll for ConfigMap collection.
+2025-09-17 09:04:00 UTC | CLUSTER | INFO | (v2@v2.130.1/klog.go:1531 in InfoS) | "Active resources" activeStoreNames="batch/v1, Resource=jobs_extended,configmaps,core/v1, Resource=nodes_extended,core/v1, Resource=pods_extended,cronjobs,daemonsets,deployments,endpoints,horizontalpodautoscalers,ingresses,jobs,limitranges,namespaces,nodes,persistentvolumeclaims,persistentvolumes,poddisruptionbudgets,pods,replicasets,replicationcontrollers,resourcequotas,secrets,services,statefulsets,storageclasses,volumeattachments"
+2025-09-17 09:04:00 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check
+2025-09-17 09:04:03 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2025-09-17 09:04:03 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check
+2025-09-17 09:04:08 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2025-09-17 09:04:10 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:04:10 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:04:10 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:04:10 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:04:10 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2025-09-17 09:04:13 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2025-09-17 09:04:13 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check
+2025-09-17 09:04:13 UTC | CLUSTER | INFO | (pkg/clusteragent/clusterchecks/handler.go:130 in Run) | Warmup phase finished, starting to serve configurations
+2025-09-17 09:04:15 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2025-09-17 09:04:15 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check
+2025-09-17 09:04:19 UTC | CLUSTER | INFO | (comp/core/healthprobe/impl/healthprobe.go:166 in healthHandler) | Healthcheck failed on: [clusterchecks-dispatch]
+2025-09-17 09:04:19 UTC | CLUSTER | INFO | (comp/core/healthprobe/impl/healthprobe.go:166 in healthHandler) | Healthcheck failed on: [clusterchecks-dispatch]
+2025-09-17 09:04:23 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2025-09-17 09:04:23 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2025-09-17 09:04:23 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check
+2025-09-17 09:04:25 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:04:25 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:04:25 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:04:25 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:04:25 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2025-09-17 09:04:30 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2025-09-17 09:04:30 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check
+2025-09-17 09:04:33 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:orchestrator | Running check...
+2025-09-17 09:04:33 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:orchestrator | Done running check, next runs will be logged every 500 runs
+2025-09-17 09:04:38 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2025-09-17 09:04:40 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check
+2025-09-17 09:04:45 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2025-09-17 09:04:45 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check
+2025-09-17 09:04:53 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_apiserver | Running check...
+2025-09-17 09:04:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:04:55 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_apiserver | Done running check, next runs will be logged every 500 runs
+2025-09-17 09:05:00 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:40 in CheckStarted) | check:kubernetes_state_core | Running check...
+2025-09-17 09:05:00 UTC | CLUSTER | INFO | (pkg/collector/worker/check_logger.go:59 in CheckFinished) | check:kubernetes_state_core | Done running check, next runs will be logged every 500 runs
+2025-09-17 09:05:10 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:06:25 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:06:40 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:06:40 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:06:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:07:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:08:10 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:08:25 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:08:40 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:08:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:09:55 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found
+2025-09-17 09:10:10 UTC | CLUSTER | WARN | (pkg/collector/corechecks/cluster/kubernetesapiserver/events_common.go:375 in getHostProviderID) | ProviderID for nodename "minikube" not found

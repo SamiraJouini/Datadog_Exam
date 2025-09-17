@@ -1,0 +1,42 @@
+datadog:
+  apiKey: "4a752f6e82c188935ad14ca68660ec92"
+  appKey: "f6b9b8bb52ccc2f8af1026881b88d0aefbd71359"
+  site: "datadoghq.eu"
+  clusterName: "minikube"
+  logsEnabled: true
+  apmEnabled: true
+  processEnabled: true
+  kubelet:
+    tls_verify: false
+
+  # Correct volume configuration
+  volumes:
+    - name: procdir
+      hostPath:
+        path: /proc
+    - name: cgroups
+      hostPath:
+        path: /sys/fs/cgroup
+    - name: dockersocket
+      hostPath:
+        path: /var/run/docker.sock
+
+  volumeMounts:
+    - name: procdir
+      mountPath: /host/proc
+      readOnly: true
+    - name: cgroups
+      mountPath: /host/sys/fs/cgroup
+      readOnly: true
+    - name: dockersocket
+      mountPath: /var/run/docker.sock
+      readOnly: true
+
+clusterAgent:
+  enabled: true
+
+kubeStateMetricsEnabled: true
+
+admissionController:
+  enabled: true
+  mutateUnlabelled: true

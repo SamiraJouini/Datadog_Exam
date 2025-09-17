@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -f docker-compose.yaml -o k8s-manifests/
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: notes-app
+  name: notes-app
+spec:
+  replicas: 2  # Changed from 1 to 2
+  selector:
+    matchLabels:
+      io.kompose.service: notes-app
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -f docker-compose.yaml -o k8s-manifests/
+        kompose.version: 1.26.1 (a9d05d509)
+      creationTimestamp: null
+      labels:
+        io.kompose.service: notes-app
+    spec:
+      containers:
+        - env:
+            - name: CALENDAR_HOST
+              value: calendar
+            - name: DB_HOST
+              value: db
+            - name: DD_AGENT_HOST
+              value: datadog
+          image: docker.io/library/notes-app:latest  # Updated image name
+          name: notes
+          imagePullPolicy: Never  # Added to use local image
+          ports:
+            - containerPort: 8080
+          resources: {}
+      restartPolicy: Always
+status: {}

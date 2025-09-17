@@ -1,0 +1,18 @@
+# Unless explicitly stated otherwise all files in this repository are dual-licensed
+# under the Apache 2.0 or BSD3 Licenses.
+#
+# This product includes software developed at Datadog (https://www.datadoghq.com/)
+# Copyright 2022 Datadog, Inc.
+FROM python:3.10
+
+WORKDIR /home
+
+COPY requirements.txt /home
+COPY /calendar_app /home/calendar_app
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+
+RUN echo 'source $HOME/.cargo/env' >> $HOME/.bashrc
+RUN pip install -r requirements.txt
+
+# Run the application without the Datadog agent or tracing
+CMD ["python", "-m", "calendar_app.app"]
