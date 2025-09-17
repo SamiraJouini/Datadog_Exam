@@ -137,7 +137,19 @@ https://app.datadoghq.eu/
 ```
 - Go to APM -> Traces. You should see traces for your GET and POST requests.
 
-## 23. Delete all applied resources:
+## 23. Collect logs in .txt files for all pods:
+```bash
+kubectl logs calendar-app-69d95f8867-kzqkv > calendar-app-logs-pod1.txt
+kubectl logs calendar-app-69d95f8867-swrbw > calendar-app-logs-pod2.txt
+kubectl logs notes-app-64fd65df79-k5zgm > notes-app-logs-pod1.txt
+kubectl logs notes-app-64fd65df79-tjm5g > notes-app-logs-pod2.txt
+kubectl logs db-6d7d499644-8v5zp > db-logs.txt
+kubectl logs datadog-cluster-agent-54c6bc9d78-4pstf > datadog-cluster-agent-logs.txt
+kubectl logs datadog-pj4q5 > datadog-logs-pod1.txt
+kubecto logs datadog-b7fd945fd-d4dcz > datadog-pod2.txt
+```
+
+## 24. Delete all applied resources:
 ```bash
 kubectl delete -f .
 ```
@@ -147,18 +159,18 @@ cd ..
 kubectl delete -f k8s-manifests/
 ```
 
-## 24. Delete all persistent volumes and persistent volume claims:
+## 25. Delete all persistent volumes and persistent volume claims:
 ```bash
 kubectl delete pv --all
 kubectl delete pvc --all
 ```
 
-## 25. Uninstall Datadog with Helm:
+## 26. Uninstall Datadog with Helm:
 ```bash
 helm uninstall datadog
 ```
 
-## 26. Delete all remaining resources:
+## 27. Delete all remaining resources:
 ```bash
 kubectl delete daemonset datadog --ignore-not-found
 kubectl delete deployment datadog-cluster-agent --ignore-not-found
